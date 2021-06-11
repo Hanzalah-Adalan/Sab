@@ -31,7 +31,24 @@ _mainbod.classList.add('mini-sidebar');
 let _promoPrice = document.querySelector("#main-wrapper > div.page-wrapper > div.container-fluid > div > div > div > div > table.display.nowrap.table.table-hover > tbody > tr:nth-child(7) > td:nth-child(7)");
 _promoPrice.style.color = 'red';
 
+
 let _mainBody = document.querySelector("#main-wrapper > div.page-wrapper > div.container-fluid > div > div");
+
+let _allTR = _mainBody.getElementsByTagName("TR");
+let _trArray = Array.prototype.slice.call(_allTR.childNodes);
+
+function filterTRAtPromo(_trItem, _trIndex) 
+{
+    if(_trItem.childNodes.length === 7)
+    {
+        if(_trItem.childNodes[4].innerText.includes("Discount Coupons"))
+        {
+            _trItem.childNodes[4].style.color = 'red';
+        }
+    }
+    
+}
+
 
 var all = _mainBody.getElementsByTagName("*");
 
