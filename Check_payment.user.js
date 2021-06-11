@@ -70,24 +70,6 @@ function myFunction(item, index)
     
 }
 
-document.addEventListener("DOMContentLoaded", function(event) {
-    setTimeout(addScript, 1000)
-  });
-  
-function addScript() 
-{
-  
-    console.log("Added Script hanzalah");
-    
-    // script = document.createElement('script');
-    // script.type = 'text/javascript';
-    // script.async = true;
-    // script.onload = function() 
-    // {
-    //   console.log("Added Script hanzalah");
-    // };
-
-    // script.src = 'https://foo.com/bar.js';
-    // document.getElementsByTagName('head')[0].appendChild(script);
-
-  }
+window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+});
