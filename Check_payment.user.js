@@ -28,6 +28,8 @@ _pageTitle.style.padding = '10px';
 let _mainbod = document.querySelector("body");
 _mainbod.classList.add('mini-sidebar');
 
+let _promoPrice = document.querySelector("#main-wrapper > div.page-wrapper > div.container-fluid > div > div > div > div > table.display.nowrap.table.table-hover > tbody > tr:nth-child(7) > td:nth-child(7)");
+_promoPrice.style.color = 'red';
 
 let _mainBody = document.querySelector("#main-wrapper > div.page-wrapper > div.container-fluid > div > div");
 
