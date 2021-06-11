@@ -34,19 +34,15 @@ _promoPrice.style.color = 'red';
 
 let _mainBody = document.querySelector("#main-wrapper > div.page-wrapper > div.container-fluid > div > div");
 
-let _allTR = _mainBody.getElementsByTagName("TR");
+let _allTR = _mainBody.getElementsByTagName("B");
 let _trArray = Array.prototype.slice.call(_allTR.childNodes);
 
-function filterTRAtPromo(_trItem, _trIndex) 
+function filterTRAtPromo(_bElem, _trIndex) 
 {
-    if(_trItem.childNodes.length === 7)
+    if(_bElem.innerText.includes("-RM"))
     {
-        if(_trItem.childNodes[4].innerText.includes("Discount Coupons"))
-        {
-            _trItem.childNodes[4].style.color = 'red';
-        }
-    }
-    
+        _bElem.style.color = 'red';
+    }    
 }
 
 
