@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Check Payment - Sabella
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @author       Anis
 // @description  To Tweak Order Details page
 // @match        https://websecure.sabella.com.my/secure/orders.php?*page=*
