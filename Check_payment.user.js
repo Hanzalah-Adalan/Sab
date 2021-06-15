@@ -27,7 +27,7 @@ let _hrBelowEmail = document.querySelector("#main-wrapper > div.page-wrapper > d
 
 let _emailID = _emailTable.childNodes[1].childNodes[0].childNodes[3].innerText;
 
-//_emailTable.remove();
+_emailTable.remove();
 _hrAboveEmail.remove();
 _hrBelowEmail.remove();
 
@@ -102,7 +102,7 @@ _homeBtnToggle.onclick = function name() {
 }
 
 let _homeIcon = document.createElement('i');
-_homeIcon.style.fontSize = '20px';
+_homeIcon.style.fontSize = '40px';
 _homeBtnToggle.appendChild(_homeIcon);
 ToggleMenu(true);
 
