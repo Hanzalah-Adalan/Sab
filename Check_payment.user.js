@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Check Payment - Sabella
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.4
 // @author       Anis
 // @description  To Tweak Order Details page
 // @match        https://websecure.sabella.com.my/secure/orders.php?*page=*
@@ -19,8 +19,11 @@ let _btnPrev = document.querySelector("#main-wrapper > div.page-wrapper > div.co
 _btnPrev.className = 'btn btn-info';
 
 let _btnNext = document.querySelector("#main-wrapper > div.page-wrapper > div.container-fluid > div > div > div > div > table:nth-child(1) > tbody > tr > td:nth-child(2) > a:nth-child(2)");
-_btnNext.className = 'btn btn-success';
-_btnNext.style.marginLeft = '20px';
+if (_btnNext) {
+    _btnNext.className = 'btn btn-success';
+    _btnNext.style.marginLeft = '20px';    
+}
+
 
 let _emailTable = document.querySelector("#main-wrapper > div.page-wrapper > div.container-fluid > div > div > div > div > table:nth-child(5)");
 let _hrAboveEmail = document.querySelector("#main-wrapper > div.page-wrapper > div.container-fluid > div > div > div > div > hr:nth-child(4)");
@@ -103,7 +106,7 @@ _homeBtnToggle.onclick = function name() {
 }
 
 let _homeIcon = document.createElement('i');
-_homeIcon.style.fontSize = '40px';
+_homeIcon.style.fontSize = '20px';
 _homeBtnToggle.appendChild(_homeIcon);
 ToggleMenu(true);
 
